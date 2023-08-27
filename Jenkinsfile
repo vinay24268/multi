@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(traceability: true) {
-                    sh 'mvn deploy'
+                    sh 'mvn install'
                 }
             }
         }
