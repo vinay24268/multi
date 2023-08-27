@@ -25,6 +25,15 @@ pipeline {
             steps {
                 withMaven(traceability: true) {
                     sh 'mvn install'
+                  }
+            }
+        }
+
+
+        stage ('Deployment Stage') {
+            steps {
+                withMaven(traceability: true) {
+                    sh 'mvn deploy'
                 }
             }
         }
