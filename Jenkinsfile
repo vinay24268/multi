@@ -6,7 +6,6 @@ pipeline {
 
             steps {
                 withMaven(traceability: true) {
-                    sh 'cd /.m2/repository'
                  sh 'mvn clean compile'
                 }
             }
